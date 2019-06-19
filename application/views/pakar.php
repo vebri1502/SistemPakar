@@ -27,7 +27,7 @@
                 <a href="#" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
-        <div class="col-9" style="padding-left: 10px">
+        <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-4">
                     <div class="card">

@@ -29,8 +29,47 @@
                 <a href="#" class="list-group-item list-group-item-action active">Basis Pengetahuan</a>
             </div>
         </div>
-        <div class="col-9" style="padding-left: 10px">
-            
+        <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
+            <h2>Aturan saat ini</h2>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Tinggi Permukaan Dataran</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Jumlah Penduduk</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px;">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Jarak Menuju Sungai</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Curah Hujan</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
