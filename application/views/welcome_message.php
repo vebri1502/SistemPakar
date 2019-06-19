@@ -87,19 +87,19 @@
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputPermukaan"><h5>Tinggi Permukaan:</h5></label>
-                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran">
+                                        <label for="inputPermukaan"><h5>Tinggi Permukaan (Satuan Meter):</h5></label>
+                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran (Contoh: 15 mdpl)">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPenduduk"><h5>Jumlah Penduduk:</h5></label>
-                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk">
+                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk (Contoh: 95000 orang)">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputSungai"><h5>Jarak Menuju Sungai:</h5></label>
-                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai">
+                                        <label for="inputSungai"><h5>Jarak Menuju Sungai (Satuan Kilometer):</h5></label>
+                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai (Contoh: 0.7 Km)">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCurahHujan"><h5>Curah Hujan:</h5></label>
