@@ -9,18 +9,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">    
         <a class="navbar-brand" href="#">Deteksi Banjir</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            </div> -->
-        </div>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username">
+            <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login Sebagai Pakar</button>
+        </form>
     </nav>
     <div>
         <br>
@@ -37,7 +32,7 @@
                                     90%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +45,7 @@
                                    10%
                                </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +58,7 @@
                                     0%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +96,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-dark">Submit</button>
                                 </div>
                                 
                             </form>

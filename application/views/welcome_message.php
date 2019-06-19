@@ -44,7 +44,7 @@
                                     90%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                                    10%
                                </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                     0%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-primary">Detail</a>
+                            <a href="#" class="btn btn-dark">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-dark">Submit</button>
                                 </div>
                                 
                             </form>
