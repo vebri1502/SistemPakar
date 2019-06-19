@@ -3,23 +3,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('user_biasa');
+	}
+
+	public function login()
+	{
+		
+
+		if (isset($_POST['submit'])) {
+			$user = $this->input->post('username', true);
+			$pass = $this->input->post('password', true);
+			$cek = $this->M_login->ceklogin($user, $pass);
+			
+			if ($cek) {
+				// $cek_login = $this->db->get_where('petugas', array('username' => $user, 'password' => $pass))->row();
+				redirect(base_url('Pakar'));
+			} else {
+				//redirect(base_url('C_login'));
+				echo "gagal";
+			}
+		}
+	}
+
+	public function admin() {
+		$this->load->view('pakar');
 	}
 }

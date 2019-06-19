@@ -9,57 +9,68 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">    
-        <a class="navbar-brand" href="#">Deteksi Banjir</a>
-        <form class="form-inline" method="post" action="<?= base_url('Welcome/login');?>">
-            <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username">
-            <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" >Login Sebagai Pakar</button>
-
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Rekomendasi Banjir</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            </div> -->
+        </div>
     </nav>
-    <div>
-        <br>
-    </div>
-    <div class="container-fluid">
-        <div class="col-12" style="padding-left: 10px">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action disabled bg-light" style="text-align: center">
+                    Menu Pakar
+                </a>
+                <a href="#" class="list-group-item list-group-item-action active">Sistem Pakar</a>
+                <a href="#" class="list-group-item list-group-item-action">Tambah Basis Pengetahuan</a>
+            </div>
+        </div>
+        <div class="col-9" style="padding-left: 10px">
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
+                            <h5 class="card-title">Resiko Rendah</h5>
                             <p class="card-text">
-                                <h1 style="text-align: center;">
+                                <h1>
                                     90%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Sedang</h5>
+                            <h5 class="card-title">Resiko Sedang</h5>
                             <p class="card-text">
-                               <h1 style="text-align: center;">
+                               <h1>
                                    10%
                                </h1>
                             </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
+                            <h5 class="card-title">Resiko Tinggi</h5>
                             <p class="card-text">
-                                <h1 style="text-align: center;">
+                                <h1>
                                     0%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -76,19 +87,19 @@
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputPermukaan"><h5>Tinggi Permukaan:</h5></label>
-                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran">
+                                        <label for="inputPermukaan"><h5>Tinggi Permukaan (Satuan Meter):</h5></label>
+                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran (Contoh: 15 mdpl)">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPenduduk"><h5>Jumlah Penduduk:</h5></label>
-                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk">
+                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk (Contoh: 95000 orang)">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputSungai"><h5>Jarak Menuju Sungai:</h5></label>
-                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai">
+                                        <label for="inputSungai"><h5>Jarak Menuju Sungai (Satuan Kilometer):</h5></label>
+                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai (Contoh: 0.7 Km)">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCurahHujan"><h5>Curah Hujan:</h5></label>
@@ -97,7 +108,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="btn btn-dark">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                                 
                             </form>
