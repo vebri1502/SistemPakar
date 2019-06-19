@@ -31,6 +31,7 @@
                 </a>
                 <a href="#" class="list-group-item list-group-item-action active">Sistem Pakar</a>
                 <a href="#" class="list-group-item list-group-item-action">Tambah Basis Pengetahuan</a>
+                <a href="#" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
         <div class="col-9" style="padding-left: 10px">
