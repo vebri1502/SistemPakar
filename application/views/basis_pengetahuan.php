@@ -11,18 +11,11 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Rekomendasi Banjir</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            </div> -->
-        </div>
+    <nav class="navbar navbar-dark bg-dark">    
+        <a class="navbar-brand" href="#">Deteksi Banjir</a>
+        <form class="form-inline" method="post" action="<?= base_url('Welcome/login');?>">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="logout" >Log Out</button>
+        </form>
     </nav>
 
     <div class="row">
