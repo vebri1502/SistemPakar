@@ -11,8 +11,8 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">    
         <a class="navbar-brand" href="#">Deteksi Banjir</a>
-        <form class="form-inline" method="post" action="<?= base_url('Welcome/login');?>">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="logout" >Log Out</button>
+        <form class="form-inline" method="post" action="<?= base_url('Welcome/logout');?>">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="logout">Log Out</button>
         </form>
     </nav>
 
