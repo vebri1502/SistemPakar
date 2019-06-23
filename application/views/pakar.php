@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">    
-        <a class="navbar-brand" href="#">Deteksi Banjir</a>
+        <a class="navbar-brand" href="<?= base_url('Pakar');?>">Deteksi Banjir</a>
         <form class="form-inline" method="post" action="<?= base_url('Welcome/logout');?>">
             <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="logout">Log Out</button>
         </form>
@@ -22,9 +22,9 @@
                 <a href="#" class="list-group-item list-group-item-action disabled bg-light" style="text-align: center">
                     Menu Pakar
                 </a>
-                <a href="#" class="list-group-item list-group-item-action active">Sistem Pakar</a>
-                <a href="#" class="list-group-item list-group-item-action">Riwayat Input</a>
-                <a href="#" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
+                <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action active">Sistem Pakar</a>
+                <a href="<?= base_url('RiwayatInput');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
+                <a href="<?= base_url('BasisPengetahuan');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
         <div class="col-9" style="padding-left: 10px; padding-top: 10px;">

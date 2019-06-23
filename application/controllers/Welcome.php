@@ -44,6 +44,6 @@ class Welcome extends CI_Controller {
             }
         }
     $this->session->sess_destroy();
-    redirect('Welcome','refresh');
+    redirect('http://localhost/SistemPakar','refresh');
     }
 }
