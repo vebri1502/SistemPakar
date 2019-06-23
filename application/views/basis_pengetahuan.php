@@ -43,11 +43,187 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <form>   
+                                <h5>1. Risiko Banjir</h5>
+                                <div class="form-group">
+                                    <Label>1.1. Risiko Kecil</Label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number"  class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>1.2. Risiko Sedang</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>1.3. Risiko Tinggi</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <h5>2. Tinggi Permukaan</h5>
+                                <div class="form-group">
+                                    <Label>2.1. Tinggi</Label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number"  class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>2.2. Sedang</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>2.3. Rendah</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <h5>3. Jumlah Penduduk</h5>
+                                <div class="form-group">
+                                    <Label>3.1. Tinggi</Label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number"  class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                    <label>3.2. Sedang</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                    <label>3.3. Rendah</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <h5>4. Jarak Sungai</h5>
+                                <div class="form-group">
+                                    <Label>4.1. Dekat</Label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number"  class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>4.2. Sedang</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>4.3. Jauh</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <h5>5. Tinggi Permukaan</h5>
+                                <div class="form-group">
+                                    <Label>5.1. Tinggi</Label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number"  class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>5.2. Sedang</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>5.3. Rendah</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                         </div>
                     </div>
@@ -56,7 +232,7 @@
             <hr>
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h4>Risiko Banjir</h4>
                             <hr>
@@ -91,7 +267,7 @@
             </div>
             <div class="row" style="padding-top: 20px;">
                 <div class="col-3">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h4>Tinggi Permukaan Dataran</h4>
                             <hr>
@@ -105,7 +281,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h4>Jumlah Penduduk</h4>
                             <hr>
@@ -119,7 +295,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h4>Jarak Menuju Sungai</h4>
                             <hr>
@@ -133,7 +309,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h4>Curah Hujan</h4>
                             <hr>
