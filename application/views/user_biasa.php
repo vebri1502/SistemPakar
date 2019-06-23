@@ -24,7 +24,7 @@
         <div class="col-12" style="padding-left: 10px">
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
                             <p class="card-text">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Sedang</h5>
                             <p class="card-text">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
                             <p class="card-text">
@@ -66,7 +66,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card"style="height: 350px;">
+                    <div class="card bg-light" style="height: 350px;">
                         <div class="card-body">
                             <h3>
                                 Input nilai
