@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">    
-        <a class="navbar-brand" href="#">Deteksi Banjir</a>
+        <a class="navbar-brand" href="<?= base_url('Welcome');?>">Deteksi Banjir</a>
         <form class="form-inline" method="post" action="<?= base_url('Welcome/login');?>">
             <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username">
             <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
