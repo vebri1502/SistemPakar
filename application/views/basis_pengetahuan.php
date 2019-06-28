@@ -116,7 +116,7 @@
                                 </div>
                                 <hr>
 
-                                <h5>3. Jumlah Penduduk</h5>
+                                <h5>3. Banyak Daerah Lebih Tinggi</h5>
                                 <div class="form-group">
                                     <Label>3.1. Tinggi</Label>
                                     <div class="row">
@@ -283,7 +283,7 @@
                 <div class="col-3">
                     <div class="card bg-light">
                         <div class="card-body">
-                            <h4>Jumlah Penduduk</h4>
+                            <h4>Jumlah Daerah Lebih Tinggi</h4>
                             <hr>
                             <ul class="list-group">
                                 <li class="list-group-item">Tinggi: 1000 - 10.000</li>
