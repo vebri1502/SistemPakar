@@ -72,31 +72,31 @@
                                 Input nilai
                             </h3>
                             <hr>
-                            <form>
+                            <form  method="post" action="<?= base_url('C_fuzzy/fuzzy');?>">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputPermukaan"><h5>Tinggi Permukaan:</h5></label>
-                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran">
+                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran" name="inputPermukaan">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPenduduk"><h5>Jumlah Penduduk:</h5></label>
-                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk">
+                                        <label for="inputDaerah"><h5>Jumlah Daratan Tinggi:</h5></label>
+                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Kepadatan Penduduk" name="banyakDaerah">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputSungai"><h5>Jarak Menuju Sungai:</h5></label>
-                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai">
+                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai" name="inputSungai">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCurahHujan"><h5>Curah Hujan:</h5></label>
-                                        <input type="number" class="form-control" id="inputCurahHujan" placeholder="Curah Hujan di Wilayah">
+                                        <input type="number" class="form-control" id="inputCurahHujan" placeholder="Curah Hujan di Wilayah" name="inputCHujan">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="btn btn-dark">Submit</button>
+                                    <button type="submit" class="btn btn-dark" name="kirim">Submit</button>
                                 </div>
                                 
                             </form>
