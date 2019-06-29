@@ -20,6 +20,8 @@ class M_fuzzy extends CI_Model {
 		$q = $this->db->get('parameter');
 		$data = $q->result_array();
 
+		return $hasil = $data[0]['batas_bawah'];
+
 		//echo($data[0]['age']);
 		//echo($data[0]['batas_bawah']);
 		//is_integer($data[0]['batas_bawah']);
@@ -34,30 +36,282 @@ class M_fuzzy extends CI_Model {
 		$data = $q->result_array();
 
 		//echo($data[0]['age']);
-		//echo($data[0]['batas_atas']);
+		return $hasil = $data[0]['batas_atas'];
 		//is_integer($data[0]['batas_atas']);
 		//echo($data[0]['batas_atas']);
 	}
 
 	public function BBsedang1_darat()
 	{
-		$BBdarat = "SELECT batas_bawah FROM `parameter` WHERE id_parameter = 2 ";
-		return $this->db->get($BBdarat)
-						->result_array();
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
 	}
 
 	public function BAsedang1_darat()
 	{
-		$BBdarat = "SELECT batas_atas FROM `parameter` WHERE id_parameter = 2 ";
-		return $this->db->get($BBdarat)
-						->result_array();
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
 	}
 
 	public function BBsedang2_darat()
 	{
-		$BBdarat = "SELECT batas_bawah FROM `parameter` WHERE id_parameter = 3 ";
-		return $this->db->get($BBdarat)
-						->result_array();
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAsedang2_darat(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBtinggi_darat(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAtinggi_darat(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBsedikit_daerah(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedikit');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAsedikit_daerah(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedikit');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBsedang1_daerah(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_bawah'];
+	}
+
+	public function BAsedang1_daerah(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_atas'];
+	}
+
+	public function BBsedang2_daerah(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_bawah'];
+	}
+
+	public function BAsedang2_daerah(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_atas'];
+	}
+
+	public function BBbanyak_daerah(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'banyak');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAbanyak_daerah(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'banyak');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBrendah_hujan(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_bawah'];
+	}
+
+	public function BArendah_hujan(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_atas'];
+	}
+
+	public function BBnormal1_hujan(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'normal1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAnormal1_hujan(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'normal1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBnormal2_hujan(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'normal2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAnormal2_hujan(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'normal2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBtinggi_hujan(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_bawah'];
+	}
+
+	public function BAtinggi_hujan(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[1]['batas_atas'];
+	}
+
+	public function BBdekat_sungai(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'dekat');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAdekat_sungai(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'dekat');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
+	}
+
+	public function BBsedang1_sungai(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_bawah'];
+	}
+
+	public function BAsedang1_sungai(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang1');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_atas'];
+	}
+
+	public function BBsedang2_sungai(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_bawah'];
+	}
+
+	public function BAsedang2_sungai(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'sedang2');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_atas'];
+	}
+
+	public function BBjauh_sungai(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'jauh');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_bawah'];
+	}
+
+	public function BAjauh_sungai(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'jauh');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[0]['batas_atas'];
 	}
 
 	public function inputMyu($data,$table)
