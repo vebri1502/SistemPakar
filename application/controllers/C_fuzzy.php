@@ -23,10 +23,16 @@ class C_fuzzy extends CI_Controller {
 	// 	$this->load->library('session');
 	// }
 
+	public function __construct(){
+		parent::__construct();
+		$this->load->library('session');
+		$this->load->model('M_fuzzy');
+	}
+
 	public function index()
 	{			
    		$this->load->view('user_biasa');
-		$this->load->model('M_login');
+		
 	}
 
 	    public function fuzzy(){
@@ -37,13 +43,15 @@ class C_fuzzy extends CI_Controller {
 			$JSungai = $this->input->post('inputSungai', true);
 			$CHujan = $this->input->post('inputCHujan', true);
 
-			$data = array(
-				'' 				=> $nama,
-				'jenis_kelamin' 	=> $jenis_kelamin,
-				'usia' 				=> $usia,
-				// 'gejala'			=> $gejala_penyakit
-				'id_petugas'		=> $this->session->userdata('id_petugas')
-			);
+			// $data = array(
+			// 	'' 				=> $nama,
+			// 	'jenis_kelamin' 	=> $jenis_kelamin,
+			// 	'usia' 				=> $usia,
+			// 	// 'gejala'			=> $gejala_penyakit
+			// 	'id_petugas'		=> $this->session->userdata('id_petugas')
+			// );
+
+			$batasBawahrendahD = $this->M_fuzzy->BBrendah_darat();
 
 			#Untuk Daratan
 			if ($TPermukaan >= 10 && $TPermukaan <= 110) {
@@ -162,7 +170,7 @@ class C_fuzzy extends CI_Controller {
 			$myuDaerah = max($myuDaerah1, $myuDaerah2, $myuDaerah3, $myuDaerah4);
 
 			$arr = min($myuDarat,$myuSungai,$myuHujan,$myuDaerah);  // Stores values in array $arr
-			echo "$arr";
+			echo "$batasBawahrendahD";
 			
 		}
     }
