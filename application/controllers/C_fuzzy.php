@@ -52,14 +52,19 @@ class C_fuzzy extends CI_Controller {
 			// );
 
 			$batasBawahrendahD = $this->M_fuzzy->BBrendah_darat();
+			$batasAtasrendahD = $this->M_fuzzy->BArendah_darat();
+			//is_integer('$batasBawahrendahD');
 
 			#Untuk Daratan
-			if ($TPermukaan >= 10 && $TPermukaan <= 110) {
-				$myuDarat1 = (110 - $TPermukaan)/(100-10);
+			if ($TPermukaan >= $batasBawahrendahD) {
+				if (($TPermukaan <= $batasAtasrendahD)) {
+					$myuDarat1 = (110 - $TPermukaan)/(100-10);
+				}
+			$myuDarat1 = (110 - $TPermukaan)/(100-10);
 				#masukin nilai myu ke database
 
 			} else {
-				$myuDarat1 = 0;
+				$myuDarat1 = 1;
 			}
 
 			if ($TPermukaan >= 50 && $TPermukaan <= 150) {
@@ -170,7 +175,7 @@ class C_fuzzy extends CI_Controller {
 			$myuDaerah = max($myuDaerah1, $myuDaerah2, $myuDaerah3, $myuDaerah4);
 
 			$arr = min($myuDarat,$myuSungai,$myuHujan,$myuDaerah);  // Stores values in array $arr
-			echo "$batasBawahrendahD";
+			echo "$myuDarat1";
 			
 		}
     }

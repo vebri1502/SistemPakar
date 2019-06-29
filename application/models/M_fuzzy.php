@@ -15,16 +15,28 @@ class M_fuzzy extends CI_Model {
 	public function BBrendah_darat()
 	{
 
-		$sql = "SELECT batas_bawah FROM 'parameter' WHERE id_parameter = 1";
-		return $this->db->get($sql)
-						->result_array();
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		//echo($data[0]['age']);
+		//echo($data[0]['batas_bawah']);
+		//is_integer($data[0]['batas_bawah']);
+		//echo($data[0]['batas_bawah']);
 	}
 
 	public function BArendah_darat()
 	{
-		$BAdarat = "SELECT batas_atas FROM `parameter` WHERE id_parameter = 1 ";
-		return $this->db->get($BBdarat)
-						->result_array();
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		//echo($data[0]['age']);
+		//echo($data[0]['batas_atas']);
+		//is_integer($data[0]['batas_atas']);
+		//echo($data[0]['batas_atas']);
 	}
 
 	public function BBsedang1_darat()
