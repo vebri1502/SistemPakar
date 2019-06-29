@@ -37,10 +37,19 @@ class C_fuzzy extends CI_Controller {
 			$JSungai = $this->input->post('inputSungai', true);
 			$CHujan = $this->input->post('inputCHujan', true);
 
+			$data = array(
+				'' 				=> $nama,
+				'jenis_kelamin' 	=> $jenis_kelamin,
+				'usia' 				=> $usia,
+				// 'gejala'			=> $gejala_penyakit
+				'id_petugas'		=> $this->session->userdata('id_petugas')
+			);
+
 			#Untuk Daratan
 			if ($TPermukaan >= 10 && $TPermukaan <= 110) {
 				$myuDarat1 = (110 - $TPermukaan)/(100-10);
 				#masukin nilai myu ke database
+
 			} else {
 				$myuDarat1 = 0;
 			}
