@@ -92,10 +92,7 @@ class C_fuzzy extends CI_Controller {
 			//is_integer('$batasBawahrendahD');
 			
 			#Untuk Daratan
-			if ($TPermukaan <= $batasAtasrendahD) {
-				if ($TPermukaan >= $batasBawahrendahD) {
-					$myuDarat11 = ($batasAtasrendahD - $TPermukaan)/($batasAtasrendahD-$batasBawahrendahD);
-				}
+			if ($TPermukaan <= $batasAtasrendahD && $TPermukaan >= $batasBawahrendahD) {
 				$myuDarat1 = ($batasAtasrendahD - $TPermukaan)/($batasAtasrendahD-$batasBawahrendahD);
 				#masukin nilai myu ke database
 
@@ -103,30 +100,21 @@ class C_fuzzy extends CI_Controller {
 				$myuDarat1 = 0;
 			}
 
-			if ($TPermukaan <= $batasAtassedang1D) {
-				if ($TPermukaan >= $batasBawahsedang1D) {
-					$myuDarat2 = ($TPermukaan - $batasBawahsedang1D)/($batasAtassedang1D-$batasBawahsedang1D);
-				}
+			if ($TPermukaan <= $batasAtassedang1D && $TPermukaan >= $batasBawahsedang1D) {
 				$myuDarat2 = ($TPermukaan - $batasBawahsedang1D)/($batasAtassedang1D-$batasBawahsedang1D);
 				#masukin nilai myu ke database
 			} else {
 				$myuDarat2 = 0;
 			}
 
-			if ($TPermukaan >= $batasBawahsedang2D) {
-				if ($TPermukaan <= $batasAtassedang2D){
-					$myuDarat3 = ($batasAtassedang2D - $TPermukaan)/($batasAtassedang2D-$batasBawahsedang2D);
-				}
+			if ($TPermukaan >= $batasBawahsedang2D && $TPermukaan <= $batasAtassedang2D) {
 				$myuDarat3 = ($batasAtassedang2D - $TPermukaan)/($batasAtassedang2D-$batasBawahsedang2D);
 				#masukin nilai myu ke database
 			} else {
 				$myuDarat3 = 0;
 			}
 
-			if ($TPermukaan <= $batasAtastinggiD) {
-				if ($TPermukaan >=$batasBawahtinggiD ) {
-					$myuDarat4 = ($TPermukaan - $batasBawahtinggiD)/($batasAtastinggiD-$batasBawahtinggiD);
-				}
+			if ($TPermukaan <= $batasAtastinggiD && $TPermukaan >=$batasBawahtinggiD) {
 				$myuDarat4 = ($TPermukaan - $batasBawahtinggiD)/($batasAtastinggiD-$batasBawahtinggiD);
 				#masukin nilai myu ke database
 			} else {
@@ -136,37 +124,25 @@ class C_fuzzy extends CI_Controller {
 			
 
 			#Untuk banyak daerah tinggi
-			if ($BDaerah <= $batasAtassedikitDa) {
-				if ($BDaerah >= $batasBawahsedikitDa) {
-					$myuDaerah1 = ($BDaerah-$batasBawahsedikitDa)/($batasAtassedikitDa-$batasBawahsedikitDa);
-				}
-				$myuDaerah1 = ($BDaerah-$batasBawahsedikitDa)/($batasAtassedikitDa-$batasBawahsedikitDa);
+			if ($BDaerah <= $batasAtassedikitDa && $BDaerah >= $batasBawahsedikitDa) {
+				$myuDaerah1 = ($batasAtassedikitDa - $BDaerah)/($batasAtassedikitDa-$batasBawahsedikitDa);
 			} else {
 				$myuDaerah1 = 0;
 			}
 
-			if ($BDaerah <= $batasAtassedang1Da) {
-				if ($BDaerah >= $batasBawahsedang1Da) {
-					$myuDaerah2 = ($batasAtassedang1Da-$BDaerah)/($batasAtassedang1Da-$batasBawahsedang1Da);
-				}
+			if ($BDaerah <= $batasAtassedang1Da && $BDaerah >= $batasBawahsedang1Da) {
 				$myuDaerah2 = ($batasAtassedang1Da-$BDaerah)/($batasAtassedang1Da-$batasBawahsedang1Da);
 			} else {
 				$myuDaerah2 = 0;
 			}
 
-			if ($BDaerah <= $batasAtassedang2Da) {
-				if ($BDaerah >= $batasBawahsedang2Da) {
-					$myuDaerah3 = ($BDaerah-$batasBawahsedang2Da)/($batasAtassedang2Da-$batasBawahsedang2Da);
-				}
+			if ($BDaerah <= $batasAtassedang2Da && $BDaerah >= $batasBawahsedang2Da) {
 				$myuDaerah3 = ($BDaerah-$batasBawahsedang2Da)/($batasAtassedang2Da-$batasBawahsedang2Da);
 			} else {
 				$myuDaerah3 = 0;
 			}
 
-			if ($BDaerah <= $batasAtasbanyakDa) {
-				if ($BDaerah >= $batasBawahbanyakDa) {
-					$myuDaerah4 = ($BDaerah-$batasBawahbanyakDa)/($batasAtasbanyakDa-$batasBawahbanyakDa);
-				}
+			if ($BDaerah <= $batasAtasbanyakDa && $BDaerah >= $batasBawahbanyakDa) {
 				$myuDaerah4 = ($BDaerah-$batasBawahbanyakDa)/($batasAtasbanyakDa-$batasBawahbanyakDa);
 			} else {
 				$myuDaerah4 = 0;
@@ -174,37 +150,25 @@ class C_fuzzy extends CI_Controller {
 			
 			
 			#Untuk jarak dengan sungai
-			if ($JSungai >= $batasBawahdekatS) {
-				if ($JSungai <= $batasAtasdekatS) {
-					$myuSungai1 = ($batasAtasdekatS - $JSungai)/($batasAtasdekatS-$batasBawahdekatS);
-				}
+			if ($JSungai >= $batasBawahdekatS && $JSungai <= $batasAtasdekatS) {
 				$myuSungai1 = ($batasAtasdekatS - $JSungai)/($batasAtasdekatS-$batasBawahdekatS);
 			} else {
 				$myuSungai1 = 0;
 			}
 
-			if ($JSungai >= $batasBawahsedang1S) {
-				if ($JSungai <= $batasAtassedang1S) {
-					$myuSungai2 = ($JSungai-$batasBawahsedang1S)/($batasAtassedang1S-$batasBawahsedang1S);
-				}
+			if ($JSungai >= $batasBawahsedang1S && $JSungai <= $batasAtassedang1S) {
 				$myuSungai2 = ($JSungai-$batasBawahsedang1S)/($batasAtassedang1S-$batasBawahsedang1S);
 			} else {
 				$myuSungai2 = 0;
 			}
 
-			if ($JSungai >= $batasBawahsedang2S) {
-				if ($JSungai <= $batasAtassedang2S) {
-					$myuSungai3 = ($batasAtassedang2S-$JSungai)/($batasAtassedang2S-$batasBawahsedang2S);
-				}
+			if ($JSungai >= $batasBawahsedang2S && $JSungai <= $batasAtassedang2S) {
 				$myuSungai3 = ($batasAtassedang2S-$JSungai)/($batasAtassedang2S-$batasBawahsedang2S);
 			} else {
 				$myuSungai3 = 0;
 			}
 
-			if ($JSungai >= $batasBawahjauhS) {
-				if ($JSungai <= $batasAtasjauhS) {
-					$myuSungai4 = ($JSungai-$batasBawahjauhS)/($batasAtasjauhS-$batasBawahjauhS);
-				}
+			if ($JSungai >= $batasBawahjauhS && $JSungai <= $batasAtasjauhS) {
 				$myuSungai4 = ($JSungai-$batasBawahjauhS)/($batasAtasjauhS-$batasBawahjauhS);
 			} else {
 				$myuSungai4 = 0;
@@ -212,37 +176,25 @@ class C_fuzzy extends CI_Controller {
 
 
 			#Untuk curah hujan
-			if ($CHujan >= $batasBawahrendahH) {
-				if ($CHujan <= $batasAtasrendahH) {
-					$myuHujan1 = ($batasAtasrendahH - $CHujan)/($batasAtasrendahH-$batasBawahrendahH);
-				}
+			if ($CHujan >= $batasBawahrendahH && $CHujan <= $batasAtasrendahH) {
 				$myuHujan1 = ($batasAtasrendahH - $CHujan)/($batasAtasrendahH-$batasBawahrendahH); 
 			} else {
 				$myuHujan1 = 0;
 			}
 
-			if ($CHujan <= $batasAtasnormal1H) {
-				if ($CHujan >= $batasBawahnormal1H) {
-					$myuHujan2 = ($CHujan-$batasBawahnormal1H)/($batasAtasnormal1H-$batasBawahnormal1H);
-				}
+			if ($CHujan <= $batasAtasnormal1H && $CHujan >= $batasBawahnormal1H) {
 				$myuHujan2 = ($CHujan-$batasBawahnormal1H)/($batasAtasnormal1H-$batasBawahnormal1H);
 			} else {
 				$myuHujan2 = 0;
 			}
 
-			if ($CHujan <= $batasAtasnormal2H) {
-				if ($CHujan >= $batasBawahnormal2H) {
-					$myuHujan3 >= ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
-				}
+			if ($CHujan <= $batasAtasnormal2H && $CHujan >= $batasBawahnormal2H) {
 				$myuHujan3 >= ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
 			} else {
 				$myuHujan3 = 0;
 			}
 
-			if ($CHujan <=$batasAtastinggiH) {
-				if ($CHujan >= $batasBawahtinggiH) {
-					$myuHujan4 = ($CHujan-$batasBawahtinggiH)/($batasAtastinggiH-$batasBawahtinggiH);
-				}
+			if ($CHujan <=$batasAtastinggiH && $CHujan >= $batasBawahtinggiH) {
 				$myuHujan4 = ($CHujan-$batasBawahtinggiH)/($batasAtastinggiH-$batasBawahtinggiH);
 			} else {
 				$myuHujan4 = 0;
@@ -256,10 +208,10 @@ class C_fuzzy extends CI_Controller {
 			$myuDaerah = max($myuDaerah1, $myuDaerah2, $myuDaerah3, $myuDaerah4);
 
 			$arr = min($myuDarat,$myuSungai,$myuHujan,$myuDaerah);  // Stores values in array $arr
-			echo "$myuDarat";
-			echo "$myuHujan";
-			echo "$myuSungai";
-			echo "$myuDaerah";
+			echo "$myuDarat <br>";
+			echo "$myuHujan <br>";
+			echo "$myuSungai <br>";
+			echo "$myuDaerah <br>";
 			
 		}
     }
