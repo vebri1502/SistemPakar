@@ -57,7 +57,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>1.2. Risiko Sedang</label>
+                                    <label>1.2. Risiko Sedang 1</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>1.2. Risiko Sedang 2</label>
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="number" class="form-control" placeholder="Minimal">
@@ -93,7 +104,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>2.2. Sedang</label>
+                                    <label>2.2. Sedang 1</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>2.2. Sedang 2</label>
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="number" class="form-control" placeholder="Minimal">
@@ -127,7 +149,16 @@
                                             <input type="number" class="form-control" placeholder="Maximal">
                                         </div>
                                     </div>
-                                    <label>3.2. Sedang</label>
+                                    <label>3.2. Sedang 1</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                    <label>3.2. Sedang 2</label>
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="number" class="form-control" placeholder="Minimal">
@@ -161,7 +192,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>4.2. Sedang</label>
+                                    <label>4.2. Sedang 1</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>4.2. Sedang 2</label>
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="number" class="form-control" placeholder="Minimal">
@@ -197,7 +239,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>5.2. Sedang</label>
+                                    <label>5.2. Sedang 1</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Minimal">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Maximal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>5.2. Sedang 2</label>
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="number" class="form-control" placeholder="Minimal">
@@ -273,7 +326,8 @@
                             <hr>
                             <ul class="list-group">
                                 <li class="list-group-item">Tinggi: 100 - 150</li>
-                                <li class="list-group-item">Sedang: 50 - 100</li>
+                                <li class="list-group-item">Sedang 1: 50 - 75</li>
+                                <li class="list-group-item">Sedang 2: 76 - 100</li>
                                 <li class="list-group-item">Rendah: 0 - 50</li>
                             </ul>
                         </div>
@@ -287,7 +341,8 @@
                             <hr>
                             <ul class="list-group">
                                 <li class="list-group-item">Tinggi: 1000 - 10.000</li>
-                                <li class="list-group-item">Sedang: 500 - 1.000</li>
+                                <li class="list-group-item">Sedang 1: 500 - 750</li>
+                                <li class="list-group-item">Sedang 2: 750 - 1.000</li>
                                 <li class="list-group-item">Rendah: 0 - 500</li>
                             </ul>
                         </div>
@@ -301,7 +356,8 @@
                             <hr>
                             <ul class="list-group">
                                 <li class="list-group-item">Jauh: 100 - 200</li>
-                                <li class="list-group-item">Sedang: 70 - 100</li>
+                                <li class="list-group-item">Sedang 1: 70 - 85</li>
+                                <li class="list-group-item">Sedang 2: 85 - 100</li>
                                 <li class="list-group-item">Dekat: 0 - 70</li>
                             </ul>
                         </div>
@@ -315,7 +371,8 @@
                             <hr>
                             <ul class="list-group">
                                 <li class="list-group-item">Tinggi: 100 - 170</li>
-                                <li class="list-group-item">Sedang: 60 - 100</li>
+                                <li class="list-group-item">Sedang 1: 60 - 78</li>
+                                <li class="list-group-item">Sedang 2: 78 - 100</li>
                                 <li class="list-group-item">Rendah: 0 - 60</li>
                             </ul>
                         </div>
