@@ -7,6 +7,7 @@ class C_fuzzy extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->model('M_fuzzy');
+		$this->load->model('M_edit');
 	}
 
 	public function index()
@@ -190,10 +191,6 @@ class C_fuzzy extends CI_Controller {
 			// If A tinggi, B banyak, C rendah, D jauh Then E kecil
 			// If A tinggi, B banyak, C rendah, D dekat Then E kecil
 
-			// if () {
-			// 	# code...
-			// }
-
 			#Aturan pertama
 			$AturanPertama = min($myuDaratRendah,$myuDaerahBanyak,$myuHujanTinggi,$myuSungaiDekat);
 			$AturanKedua = min($myuDaratTinggi,$myuDaerahSedikit,$myuHujanRendah,$myuSungaiJauh);
@@ -226,11 +223,14 @@ class C_fuzzy extends CI_Controller {
 			
 
 			$hasil1 = (($r1*$AturanPertama)+($r2*$AturanKedua) + ($r3*$AturanKetiga) + ($r4 * $AturanKeempat))/($AturanPertama+$AturanKedua+$AturanKetiga+$AturanKeempat);
-			$hasil2 = 100 - $hasil1;
 			
- // Stores values in array $arr
-			echo "$hasil1 <br>";
-			echo "$hasil2 <br>";
+
+			$data = array(
+				'hasil1' 				=> $hasil1
+			);
+			// Masukkan ke DB
+			$insert = $this->M_edit->input($data, 'hasil');
+			redirect(base_url().'Welcome');
 			
 		}
     }

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_edit extends CI_Model {
 
 	private $table  = 'faktor';
-	private $table2 = 'myu';
+	private $table2 = 'hasil';
 	private $table3 = 'risiko';
 	private $table4 = 'parameter';
 
@@ -15,6 +15,11 @@ class M_edit extends CI_Model {
 		return $this->db->join($this->table,'faktor.id_faktor=parameter.id_faktor')
 						->get($this->table4)
 						->result_array();
+	}
+
+	public function input($data)
+	{
+		$this->db->insert('hasil', $data);
 	}
 
 	function fetch_data()  
@@ -30,7 +35,6 @@ class M_edit extends CI_Model {
            $this->db->where("id_parameter", $id);  
            $query = $this->db->get("parameter");  
            return $query;  
-           //Select * FROM tbl_user where id = '$id'  
       }  
 
     public function showLogMak()

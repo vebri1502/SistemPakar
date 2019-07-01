@@ -57,5 +57,11 @@ class C_edit extends CI_Controller {
 			}
 		}
 	}
+
+	public function tampil_data(){
+		$this->load->model('M_edit');
+		$data['data'] = $this->M_edit->show();
+		$this->load->view('user_biasa', $data);
+	}
 }
 ?>

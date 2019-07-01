@@ -21,7 +21,7 @@
         <br>
     </div>
     <div class="container-fluid">
-        
+        <?php foreach($data as $v): ?>
         <div class="col-12" style="padding-left: 10px">
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-6">
@@ -230,6 +230,7 @@
                 </div>
             </div>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </body>
