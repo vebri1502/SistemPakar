@@ -69,129 +69,168 @@ class C_fuzzy extends CI_Controller {
 			$batasAtassedang2S = $this->M_fuzzy->BAsedang2_sungai();
 			$batasBawahjauhS = $this->M_fuzzy->BBjauh_sungai();
 			$batasAtasjauhS = $this->M_fuzzy->BAjauh_sungai();
-			//is_integer('$batasBawahrendahD');
+
+			#Risiko
+			$batasBawahKecilRisiko = $this->M_fuzzy->BBkecilRisiko();
+			$batasAtasKecilRisiko = $this->M_fuzzy->BAkecilRisiko();
+			$batasBawahTinggiRisiko = $this->M_fuzzy->BBTinggiRisiko();
+			$batasAtasTinggiRisiko = $this->M_fuzzy->BATinggiRisiko();
 			
 			#Untuk Daratan
 			if ($TPermukaan <= $batasAtasrendahD && $TPermukaan >= $batasBawahrendahD) {
-				$myuDarat1 = ($batasAtasrendahD - $TPermukaan)/($batasAtasrendahD-$batasBawahrendahD);
+				$myuDaratRendah = ($batasAtasrendahD - $TPermukaan)/($batasAtasrendahD-$batasBawahrendahD);
 				#masukin nilai myu ke database
 
 			} else {
-				$myuDarat1 = 0;
+				$myuDaratRendah = 0;
 			}
 
 			if ($TPermukaan <= $batasAtassedang1D && $TPermukaan >= $batasBawahsedang1D) {
-				$myuDarat2 = ($TPermukaan - $batasBawahsedang1D)/($batasAtassedang1D-$batasBawahsedang1D);
+				$myuDaratSedang1 = ($TPermukaan - $batasBawahsedang1D)/($batasAtassedang1D-$batasBawahsedang1D);
 				#masukin nilai myu ke database
 			} else {
-				$myuDarat2 = 0;
+				$myuDaratSedang1 = 0;
 			}
 
 			if ($TPermukaan >= $batasBawahsedang2D && $TPermukaan <= $batasAtassedang2D) {
-				$myuDarat3 = ($batasAtassedang2D - $TPermukaan)/($batasAtassedang2D-$batasBawahsedang2D);
+				$myuDaratSedang2 = ($batasAtassedang2D - $TPermukaan)/($batasAtassedang2D-$batasBawahsedang2D);
 				#masukin nilai myu ke database
 			} else {
-				$myuDarat3 = 0;
+				$myuDaratSedang2 = 0;
 			}
 
 			if ($TPermukaan <= $batasAtastinggiD && $TPermukaan >=$batasBawahtinggiD) {
 				$myuDarat4 = ($TPermukaan - $batasBawahtinggiD)/($batasAtastinggiD-$batasBawahtinggiD);
 				#masukin nilai myu ke database
 			} else {
-				$myuDarat4 = 0;
+				$myuDaratTinggi = 0;
 			}
 
 			
 
 			#Untuk banyak daerah tinggi
 			if ($BDaerah <= $batasAtassedikitDa && $BDaerah >= $batasBawahsedikitDa) {
-				$myuDaerah1 = ($batasAtassedikitDa - $BDaerah)/($batasAtassedikitDa-$batasBawahsedikitDa);
+				$myuDaerahSedikit = ($batasAtassedikitDa - $BDaerah)/($batasAtassedikitDa-$batasBawahsedikitDa);
 			} else {
-				$myuDaerah1 = 0;
+				$myuDaerahSedikit = 0;
 			}
 
 			if ($BDaerah <= $batasAtassedang1Da && $BDaerah >= $batasBawahsedang1Da) {
-				$myuDaerah2 = ($batasAtassedang1Da-$BDaerah)/($batasAtassedang1Da-$batasBawahsedang1Da);
+				$myuDaerahSedang1 = ($batasAtassedang1Da-$BDaerah)/($batasAtassedang1Da-$batasBawahsedang1Da);
 			} else {
-				$myuDaerah2 = 0;
+				$myuDaerahSedang1 = 0;
 			}
 
 			if ($BDaerah <= $batasAtassedang2Da && $BDaerah >= $batasBawahsedang2Da) {
-				$myuDaerah3 = ($BDaerah-$batasBawahsedang2Da)/($batasAtassedang2Da-$batasBawahsedang2Da);
+				$myuDaerahSedang2 = ($BDaerah-$batasBawahsedang2Da)/($batasAtassedang2Da-$batasBawahsedang2Da);
 			} else {
-				$myuDaerah3 = 0;
+				$myuDaerahSedang2 = 0;
 			}
 
 			if ($BDaerah <= $batasAtasbanyakDa && $BDaerah >= $batasBawahbanyakDa) {
-				$myuDaerah4 = ($BDaerah-$batasBawahbanyakDa)/($batasAtasbanyakDa-$batasBawahbanyakDa);
+				$myuDaerahBanyak = ($BDaerah-$batasBawahbanyakDa)/($batasAtasbanyakDa-$batasBawahbanyakDa);
 			} else {
-				$myuDaerah4 = 0;
+				$myuDaerahBanyak = 0;
 			}
 			
 			
 			#Untuk jarak dengan sungai
 			if ($JSungai >= $batasBawahdekatS && $JSungai <= $batasAtasdekatS) {
-				$myuSungai1 = ($batasAtasdekatS - $JSungai)/($batasAtasdekatS-$batasBawahdekatS);
+				$myuSungaiDekat = ($batasAtasdekatS - $JSungai)/($batasAtasdekatS-$batasBawahdekatS);
 			} else {
-				$myuSungai1 = 0;
+				$myuSungaiDekat = 0;
 			}
 
 			if ($JSungai >= $batasBawahsedang1S && $JSungai <= $batasAtassedang1S) {
-				$myuSungai2 = ($JSungai-$batasBawahsedang1S)/($batasAtassedang1S-$batasBawahsedang1S);
+				$myuSungaiSedang1 = ($JSungai-$batasBawahsedang1S)/($batasAtassedang1S-$batasBawahsedang1S);
 			} else {
-				$myuSungai2 = 0;
+				$myuSungaiSedang1 = 0;
 			}
 
 			if ($JSungai >= $batasBawahsedang2S && $JSungai <= $batasAtassedang2S) {
-				$myuSungai3 = ($batasAtassedang2S-$JSungai)/($batasAtassedang2S-$batasBawahsedang2S);
+				$myuSungaiSedang2 = ($batasAtassedang2S-$JSungai)/($batasAtassedang2S-$batasBawahsedang2S);
 			} else {
-				$myuSungai3 = 0;
+				$myuSungaiSedang2 = 0;
 			}
 
 			if ($JSungai >= $batasBawahjauhS && $JSungai <= $batasAtasjauhS) {
-				$myuSungai4 = ($JSungai-$batasBawahjauhS)/($batasAtasjauhS-$batasBawahjauhS);
+				$myuSungaiJauh = ($JSungai-$batasBawahjauhS)/($batasAtasjauhS-$batasBawahjauhS);
 			} else {
-				$myuSungai4 = 0;
+				$myuSungaiJauh = 0;
 			}
 
 
 			#Untuk curah hujan
 			if ($CHujan >= $batasBawahrendahH && $CHujan <= $batasAtasrendahH) {
-				$myuHujan1 = ($batasAtasrendahH - $CHujan)/($batasAtasrendahH-$batasBawahrendahH); 
+				$myuHujanRendah = ($batasAtasrendahH - $CHujan)/($batasAtasrendahH-$batasBawahrendahH); 
 			} else {
-				$myuHujan1 = 0;
+				$myuHujanRendah = 0;
 			}
 
 			if ($CHujan <= $batasAtasnormal1H && $CHujan >= $batasBawahnormal1H) {
-				$myuHujan2 = ($CHujan-$batasBawahnormal1H)/($batasAtasnormal1H-$batasBawahnormal1H);
+				$myuHujanNormal1 = ($CHujan-$batasBawahnormal1H)/($batasAtasnormal1H-$batasBawahnormal1H);
 			} else {
-				$myuHujan2 = 0;
+				$myuHujanNormal1 = 0;
 			}
 
 			if ($CHujan <= $batasAtasnormal2H && $CHujan >= $batasBawahnormal2H) {
-				$myuHujan3 >= ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
+				$myuHujanNormal2 >= ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
 			} else {
-				$myuHujan3 = 0;
+				$myuHujanNormal2 = 0;
 			}
 
 			if ($CHujan <=$batasAtastinggiH && $CHujan >= $batasBawahtinggiH) {
-				$myuHujan4 = ($CHujan-$batasBawahtinggiH)/($batasAtastinggiH-$batasBawahtinggiH);
+				$myuHujanTinggi = ($CHujan-$batasBawahtinggiH)/($batasAtastinggiH-$batasBawahtinggiH);
 			} else {
-				$myuHujan4 = 0;
+				$myuHujanTinggi = 0;
 			}
 
+			// If A rendah, B banyak, C tinggi, D dekat, Then E besar
+			// If A tinggi, B sedikit, C rendah, D jauh Then E kecil
+			// If A tinggi, B banyak, C rendah, D jauh Then E kecil
+			// If A tinggi, B banyak, C rendah, D dekat Then E kecil
+
+			// if () {
+			// 	# code...
+			// }
+
+			#Aturan pertama
+			$AturanPertama = min($myuDaratRendah,$myuDaerahBanyak,$myuHujanTinggi,$myuSungaiDekat);
+			$AturanKedua = min($myuDaratTinggi,$myuDaerahSedikit,$myuHujanRendah,$myuSungaiJauh);
+			$AturanKetiga = min($myuDaratTinggi,$myuDaerahBanyak,$myuHujanRendah,$myuSungaiJauh);
+			$AturanKeempat = min($myuDaratTinggi,$myuDaerahBanyak,$myuHujanRendah,$myuSungaiDekat);
+
+			if ($AturanPertama != 0) {
+				$r1 = ($AturanPertama * ($batasAtasTinggiRisiko - $batasBawahTinggiRisiko)) + $batasBawahTinggiRisiko;
+			} else {
+				$r1 = 1;
+			}
+
+			if ($AturanKedua != 0) {
+				$r2 = $batasAtasKecilRisiko - ($AturanKedua * ($batasAtasKecilRisiko - $batasBawahKecilRisiko));
+			} else {
+				$r2 = 1;
+			}
+
+			if ($AturanKetiga != 0) {
+				$r3 = $batasAtasKecilRisiko - ($AturanKetiga * ($batasAtasKecilRisiko - $batasBawahKecilRisiko));
+			} else {
+				$r3 = 1;
+			}
+
+			if ($AturanKetiga != 0) {
+				$r4 = $batasAtasKecilRisiko - ($AturanKeempat * ($batasAtasKecilRisiko - $batasBawahKecilRisiko));
+			} else {
+				$r4 = 1;
+			}
 			
 
-			$myuDarat = max($myuDarat1,$myuDarat2,$myuDarat3,$myuDarat4);
-			$myuHujan = max($myuHujan1,$myuHujan2,$myuHujan3,$myuHujan4);
-			$myuSungai = max($myuSungai1, $myuSungai2, $myuSungai3, $myuSungai4);
-			$myuDaerah = max($myuDaerah1, $myuDaerah2, $myuDaerah3, $myuDaerah4);
-
-			$arr = min($myuDarat,$myuSungai,$myuHujan,$myuDaerah);  // Stores values in array $arr
-			echo "$myuDarat <br>";
-			echo "$myuHujan <br>";
-			echo "$myuSungai <br>";
-			echo "$myuDaerah <br>";
+			$hasil1 = (($r1*$AturanPertama)+($r2*$AturanKedua) + ($r3*$AturanKetiga) + ($r4 * $AturanKeempat))/($AturanPertama+$AturanKedua+$AturanKetiga+$AturanKeempat);
+			$hasil2 = 100 - $hasil1;
+			
+ // Stores values in array $arr
+			echo "$hasil1 <br>";
+			echo "$hasil2 <br>";
 			
 		}
     }

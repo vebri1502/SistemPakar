@@ -42,6 +42,7 @@
                     <tr>
                       <th style="text-align: center;">ID</th>
                       <th>NAMA PARAMETER</th>
+                      <th>PARAMETER</th>
                       <th style="text-align: center;">BATAS BAWAH</th>
                       <th style="text-align: center;">BATAS ATAS</th>
                       <th></th>
@@ -51,6 +52,7 @@
                     <?php foreach($data as $v): ?>
                       <tr>
                         <td style="text-align: center;"><?php echo $v["id_parameter"]; ?></td>
+                        <td><?php echo $v["nama_faktor"]; ?></td>
                         <td><?php echo $v["nama_parameter"]; ?></td>
                         <td style="text-align: center;"><?php echo $v["batas_bawah"]; ?></td>
                         <td style="text-align: center;"><?php echo $v["batas_atas"]; ?></td>

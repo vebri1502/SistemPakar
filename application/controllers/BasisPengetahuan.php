@@ -20,6 +20,7 @@ class BasisPengetahuan extends CI_Controller {
 		$this->load->model('M_edit');
 		$data['abc'] = $this->M_edit->viewDatabase();
 		$data['data'] = $this->M_edit->showLogMak();
+		$data['data'] = $this->M_edit->show();
 		$this->load->view('basis_pengetahuan', $data);
 	}
 

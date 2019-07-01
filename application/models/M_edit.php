@@ -11,6 +11,11 @@ class M_edit extends CI_Model {
 	public function editParameter($where, $table){
 		return $this->db->get_where($table4, $where);;
 	}
+	public function show(){
+		return $this->db->join($this->table,'faktor.id_faktor=parameter.id_faktor')
+						->get($this->table4)
+						->result_array();
+	}
 
 	function fetch_data()  
       {  

@@ -309,6 +309,42 @@ class M_fuzzy extends CI_Model {
 		return $hasil = $data[0]['batas_atas'];
 	}
 
+	public function BBkecilRisiko(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'Rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_bawah'];
+	}
+
+	public function BAkecilRisiko(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'Rendah');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_atas'];
+	}
+
+	public function BBTinggiRisiko(){
+		$this->db->select('batas_bawah');
+		$this->db->where('nama_parameter', 'Tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_bawah'];
+	}
+
+	public function BATinggiRisiko(){
+		$this->db->select('batas_atas');
+		$this->db->where('nama_parameter', 'Tinggi');
+		$q = $this->db->get('parameter');
+		$data = $q->result_array();
+
+		return $hasil = $data[2]['batas_atas'];
+	}
+
 	public function inputMyu($data,$table)
 	{
 		$this->db->insert($table, $data);
