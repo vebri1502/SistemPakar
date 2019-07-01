@@ -27,7 +27,7 @@
       <input class="form-control" name="bb" value="<?php echo $v->batas_bawah ?>" >
       <h2>Batas Atas</h2>
       <input class="form-control" name="ba" value="<?php echo $v->batas_atas ?>" >
-      <input type="submit" class="btn btn-md btn-block" value="kirim"  >
+      <input type="submit" class="btn btn-dark" value="kirim"  >
       <?php } ?> 
       </form>
       
