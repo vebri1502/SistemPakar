@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_fuzzy extends CI_Model {
 
-	private $table  = 'faktor';
-	private $table2 = 'myu';
-	private $table3 = 'risiko';
-	private $table4 = 'parameter';
-
 	public function __construct(){
 		parent::__construct();
 	}

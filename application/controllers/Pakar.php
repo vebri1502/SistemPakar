@@ -30,4 +30,6 @@ class Pakar extends CI_Controller {
    		$this->load->model('M_login');
 		$this->load->view('pakar');
 	}
+
+	
 }

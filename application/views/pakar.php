@@ -24,7 +24,7 @@
                 </a>
                 <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action active">Sistem Pakar</a>
                 <a href="<?= base_url('RiwayatInput');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
-                <a href="<?= base_url('BasisPengetahuan');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
+                <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
         <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
