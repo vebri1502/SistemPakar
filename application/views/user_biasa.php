@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div class="col-12" style="padding-left: 10px">
             <div class="row" style="padding-bottom: 20px">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
@@ -32,33 +32,67 @@
                                     90%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title 1</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Sedang</h5>
-                            <p class="card-text">
-                               <h1 style="text-align: center;">
-                                   10%
-                               </h1>
-                            </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1 style="text-align: center;">
-                                    0%
+                                    10%
                                 </h1>
                             </p>
-                            <a href="#" class="btn btn-dark">Detail</a>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title 2</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
