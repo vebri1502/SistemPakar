@@ -32,10 +32,12 @@
         </div>
         
         <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
+            <h2>Aturan saat ini </h2>
+            <hr>
+            
+            <h5>Tinggi Permukaan</h5>
+            <hr>
             <div class="row">
-
-                <h2>Aturan saat ini </h2>
-                
                <div class="table-responsive">
                 <table class="table table-hover table-sm">
                   <thead>
@@ -59,7 +61,7 @@
                     <?php endforeach; ?>
                   </tbody>
                 </table>
-              </div>
+            </div>
         </div>
         
     </div>
