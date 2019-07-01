@@ -42,13 +42,58 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title 1</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Rendah Detail</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        <h5>Hasil Input</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Tinggi Permukaan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jumlah Penduduk</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jarak Menuju Sungai</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Curah Hujan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <h5>Penjelasan</h5>
+                                        <hr>
+                                        <p>Risiko rendah didapatkan dari .... (Arnesz tulung ditambahin</p>
+
+                                        <hr>
+
+                                        <h5>Rekomendasi</h5>
+                                        <hr>
+                                        <p>Dengan risiko bencana rendah, disarankan untuk .... (Arnesz tulung ditambahin)</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -78,13 +123,58 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title 2</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Tinggi Detail</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        <h5>Hasil Input</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Tinggi Permukaan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jumlah Penduduk</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jarak Menuju Sungai</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Curah Hujan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                :
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <h5>Penjelasan</h5>
+                                        <hr>
+                                        <p>Risiko tinggi didapatkan dari .... (Arnesz tulung ditambahin</p>
+
+                                        <hr>
+
+                                        <h5>Rekomendasi</h5>
+                                        <hr>
+                                        <p>Dengan risiko bencana tinggi, disarankan untuk .... (Arnesz tulung ditambahin)</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
