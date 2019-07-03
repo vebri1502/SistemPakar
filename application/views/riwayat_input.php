@@ -25,8 +25,8 @@
                     Menu Pakar
                 </a>
                 <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action">Sistem Pakar</a>
-                <a href="<?= base_url('RiwayatInput');?>" class="list-group-item list-group-item-action active">Riwayat Input</a>
-                <a href="<?= base_url('BasisPengetahuan');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
+                <a href="<?= base_url('C_riwayat/tampilData');?>" class="list-group-item list-group-item-action active">Riwayat Input</a>
+                <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
         <div class="col-9" style="padding-left: 10px">
@@ -34,27 +34,25 @@
                 <table class="table table-hover table-light">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
                         <th scope="col" style="text-align: center">Tinggi Permukaan</th>
-                        <th scope="col" style="text-align: center">Jumlah Penduduk</th>
+                        <th scope="col" style="text-align: center">Jumlah Daerah Tinggi</th>
                         <th scope="col" style="text-align: center">Jarak Sungai</th>
                         <th scope="col" style="text-align: center">Curah Hujan</th>
                         <th scope="col" style="text-align: center">Rendah</th>
-                        <th scope="col" style="text-align: center">Sedang</th>
                         <th scope="col" style="text-align: center">Tinggi</th>
                       </tr>
                     </thead>
                     <tbody>
+                        <?php foreach($data as $v): ?>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>15 Mdpl</td>
-                        <td>5925 jiwa</td>
-                        <td>1,6 Km</td>
-                        <td>583</td>
-                        <td>10%</td>
-                        <td>70%</td>
-                        <td>10%</td>
+                        <td><?php echo $v["tinggi_permukaan"]; ?> Mdpl</td>
+                        <td><?php echo $v["jumlah_daerahT"]; ?> Daerah</td>
+                        <td><?php echo $v["jarak_sungai"]; ?> Km</td>
+                        <td><?php echo $v["curah_hujan"]; ?></td>
+                        <td><?php echo $v["hasil2"]; ?>%</td>
+                        <td><?php echo $v["hasil1"]; ?>%</td>
                       </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

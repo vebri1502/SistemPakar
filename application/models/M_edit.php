@@ -7,6 +7,7 @@ class M_edit extends CI_Model {
 	private $table2 = 'hasil';
 	private $table3 = 'risiko';
 	private $table4 = 'parameter';
+  private $table5 = 'masukan';
 
 	public function editParameter($where, $table){
 		return $this->db->get_where($table4, $where);;
@@ -17,10 +18,20 @@ class M_edit extends CI_Model {
 						->result_array();
 	}
 
+  public function showH(){
+    return $this->db->get($this->table5)
+            ->result_array();
+  }
+
 	public function input($data)
 	{
 		$this->db->insert('hasil', $data);
 	}
+
+  public function inputM($data)
+  {
+    $this->db->insert('masukan', $data);
+  }
 
 	function fetch_data()  
       {  
@@ -30,11 +41,39 @@ class M_edit extends CI_Model {
            return $query;  
       }
 
+      function fetch_dataH()  
+      {  
+           $this->db->select("*");  
+           $this->db->from("hasil");  
+           $query = $this->db->get();  
+           return $query;  
+      }
+
       function fetch_single_data($id)  
       {  
            $this->db->where("id_parameter", $id);  
            $query = $this->db->get("parameter");  
            return $query;  
+      }  
+
+      function id_terakhir(){
+      	$this->db->select('id_masukan');
+        $this->db->order_by('id_masukan',"desc");
+        $this->db->limit(1);
+        $hasil = $this->db->get('masukan')->row();
+
+        return $hasil;
+      }
+
+      function fetch_single_dataH()  
+      {  
+        $id = $this->id_terakhir();
+        $hasilID = $id->id_masukan;
+
+      	$id = $hasilID;
+        $this->db->where("id_masukan", $id);  
+        $query = $this->db->get("masukan");  
+        return $query;  
       }  
 
     public function showLogMak()
@@ -47,6 +86,15 @@ class M_edit extends CI_Model {
 		return $this->db->get('parameter')->result();
 	}
 
+  public function viewH(){
+    return $this->db->get('masukan')->result();
+  }
+
+  public function showHistory()
+  {
+    return $this->db->get($this->table5)
+            ->result_array();
+  }
       
 
       function update_data($where,$data,$table){

@@ -9,8 +9,17 @@ class Welcome extends CI_Controller {
 	}
 
 	public function index()
-	{
-		$this->load->view('user_biasa');
+	{	
+		  
+        $this->load->model("M_edit");
+		$id = $this->M_edit->id_terakhir();
+		$hasilID = $id->id_masukan;
+
+		$user_id = $hasilID;  
+        $data["user_data"] = $this->M_edit->fetch_single_dataH($user_id);  
+        $data["fetch_data"] = $this->M_edit->fetch_dataH();
+        //$this->load->library('form_validation');   
+        $this->load->view("user_biasa", $data); 
 		$this->load->model('M_login');
 	}
 

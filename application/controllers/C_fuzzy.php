@@ -31,7 +31,7 @@ class C_fuzzy extends CI_Controller {
 			// 	// 'gejala'			=> $gejala_penyakit
 			// 	'id_petugas'		=> $this->session->userdata('id_petugas')
 			// );
-
+			
 			$batasBawahrendahD = $this->M_fuzzy->BBrendah_darat();
 			$batasAtasrendahD = $this->M_fuzzy->BArendah_darat();
 			$batasBawahsedang1D = $this->M_fuzzy->BBsedang1_darat();
@@ -175,7 +175,7 @@ class C_fuzzy extends CI_Controller {
 			}
 
 			if ($CHujan <= $batasAtasnormal2H && $CHujan >= $batasBawahnormal2H) {
-				$myuHujanNormal2 >= ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
+				$myuHujanNormal2 = ($batasAtasnormal2H - $CHujan)/($batasAtasnormal2H-$batasBawahnormal2H);
 			} else {
 				$myuHujanNormal2 = 0;
 			}
@@ -223,15 +223,22 @@ class C_fuzzy extends CI_Controller {
 			
 
 			$hasil1 = (($r1*$AturanPertama)+($r2*$AturanKedua) + ($r3*$AturanKetiga) + ($r4 * $AturanKeempat))/($AturanPertama+$AturanKedua+$AturanKetiga+$AturanKeempat);
-			
+			$hasil2 = 100 - $hasil1;
 
 			$data = array(
-				'hasil1' 				=> $hasil1
+				'hasil1' 					=> $hasil1,
+				'hasil2'					=> $hasil2,
+				'tinggi_permukaan' 			=> $TPermukaan,
+				'jumlah_daerahT'			=> $BDaerah,
+				'jarak_sungai' 				=> $JSungai,
+				'curah_hujan'				=> $CHujan
 			);
+
 			// Masukkan ke DB
-			$insert = $this->M_edit->input($data, 'hasil');
-			redirect(base_url().'Welcome');
 			
+			$insertM = $this->M_edit->inputM($data, 'masukan');
+			redirect(base_url().'BasisPengetahuan/tampilHasil');			
+
 		}
     }
 }

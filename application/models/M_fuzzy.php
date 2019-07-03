@@ -7,6 +7,15 @@ class M_fuzzy extends CI_Model {
 		parent::__construct();
 	}
 
+	function id_terakhir(){
+      	$this->db->select('id_hasil');
+      	$this->db->order_by('id_hasil',"desc");
+      	$this->db->limit(1);
+      	$hasil = $this->db->get('hasil')->row();
+
+      	return $hasil;
+      }
+
 	public function BBrendah_darat()
 	{
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_edit extends CI_Controller {
+class C_riwayat extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +18,7 @@ class C_edit extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
-	public function __construct(){
+   public function __construct(){
         parent::__construct();
         if(!$this->session->userdata('id_pakar')){
             redirect('welcome');
@@ -27,20 +26,18 @@ class C_edit extends CI_Controller {
     }
 
 	public function index()
-	{
-		$this->load->view('basis_pengetahuan');
+	{			
+   		$this->load->model('M_login');
+		$this->load->view('riwayat_input');
 	}
 
-	public function tampil_data(){
+	public function tampilData(){
 		$this->load->model('M_edit');
-		$data['data'] = $this->M_edit->show();
-		$this->load->view('user_biasa', $data);
-	}
-
-	public function tampil_dataH(){
-		$this->load->model('M_edit');
+		$data['abc'] = $this->M_edit->viewH();
+		$data['data'] = $this->M_edit->showHistory();
 		$data['data'] = $this->M_edit->showH();
 		$this->load->view('riwayat_input', $data);
 	}
+
+	
 }
-?>

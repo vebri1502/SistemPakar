@@ -24,6 +24,16 @@ class BasisPengetahuan extends CI_Controller {
 		$this->load->view('basis_pengetahuan', $data);
 	}
 
+	public function tampilHasil($id){
+		
+		$user_id = $this->uri->segment(3);  
+        $this->load->model("M_edit");  
+        $data["user_data"] = $this->M_edit->fetch_single_dataH($user_id);  
+        $data["fetch_data"] = $this->M_edit->fetch_dataM();
+        //$this->load->library('form_validation');   
+        $this->load->view("user_biasa", $data); 
+	}
+
 	public function editData($id) {
 		$user_id = $this->uri->segment(3);  
         $this->load->model("M_edit");  

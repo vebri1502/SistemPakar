@@ -23,7 +23,7 @@
                     Menu Pakar
                 </a>
                 <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action active">Sistem Pakar</a>
-                <a href="<?= base_url('RiwayatInput');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
+                <a href="<?= base_url('C_riwayat/tampilData');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
                 <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>

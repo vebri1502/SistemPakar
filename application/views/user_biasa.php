@@ -21,7 +21,7 @@
         <br>
     </div>
     <div class="container-fluid">
-        
+        <?php foreach ($user_data->result() as $v) {?>
         <div class="col-12" style="padding-left: 10px">
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-6">
@@ -29,8 +29,7 @@
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
                             <p class="card-text">
-                                <h1 style="text-align: center;">
-                                    90%
+                                <h1 style="text-align: center;"><?php echo $v->hasil2 ?> %
                                 </h1>
                             </p>
                             <!-- Button trigger modal -->
@@ -111,8 +110,7 @@
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
                             <p class="card-text">
-                                <h1 style="text-align: center;">
-                                    10%
+                                <h1 style="text-align: center;"><?php echo $v->hasil1 ?> %
                                 </h1>
                             </p>
                             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
@@ -230,6 +228,7 @@
                 </div>
             </div>
             </div>
+            <?php } ?>
         </div>
     </div>
 </body>
