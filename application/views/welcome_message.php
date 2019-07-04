@@ -38,7 +38,7 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Resiko Rendah</h5>
+                            <h5 class="card-title">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1>
                                     90%
@@ -64,7 +64,7 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Resiko Tinggi</h5>
+                            <h5 class="card-title">Resiko Rendah</h5>
                             <p class="card-text">
                                 <h1>
                                     0%

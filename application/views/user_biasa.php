@@ -27,7 +27,7 @@
                 <div class="col-sm-6">
                     <div class="card bg-light">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
+                            <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1 style="text-align: center;"><?php echo $v->hasil2 ?> %
                                 </h1>
@@ -42,7 +42,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Rendah Detail</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Tinggi Detail</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-5">
-                                                <b>Jumlah Penduduk</b>
+                                                <b>Jumlah Wilayah Tinggi</b>
                                             </div>
                                             <div class="col-sm-7">
                                                 : <?php echo $v->jumlah_daerahT ?>
@@ -108,7 +108,7 @@
                 <div class="col-sm-6">
                     <div class="card bg-light">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
+                            <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
                             <p class="card-text">
                                 <h1 style="text-align: center;"><?php echo $v->hasil1 ?> %
                                 </h1>
@@ -122,7 +122,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Tinggi Detail</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Rendah Detail</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
@@ -202,8 +202,8 @@
                                         <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran" name="inputPermukaan">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputDaerah"><h5>Jumlah Daratan Tinggi:</h5></label>
-                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Kepadatan Penduduk" name="banyakDaerah">
+                                        <label for="inputDaerah"><h5>Jumlah Wilayah Tinggi:</h5></label>
+                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Wilayah yang lebih tinggi" name="banyakDaerah">
                                     </div>
                                 </div>
 
