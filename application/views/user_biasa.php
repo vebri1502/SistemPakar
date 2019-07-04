@@ -87,13 +87,13 @@
 
                                         <h5>Penjelasan</h5>
                                         <hr>
-                                        <p>Risiko rendah didapatkan dari .... (Arnesz tulung ditambahin</p>
+                                        <p>Risiko tinggi dari hasil perhitungan Tsukamoto (z = (A1Z1 + A2Z2 + ... + AnZn)/(A1 + A2 + ... + An))</p>
 
                                         <hr>
 
                                         <h5>Rekomendasi</h5>
                                         <hr>
-                                        <p>Dengan risiko bencana rendah, disarankan untuk .... (Arnesz tulung ditambahin)</p>
+                                        <p>Disarankan untuk selalu waspada terhadap potensi banjir yang tinggi dan/atau tidak tinggal daerah tersebut</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -167,13 +167,13 @@
 
                                         <h5>Penjelasan</h5>
                                         <hr>
-                                        <p>Risiko tinggi didapatkan dari .... (Arnesz tulung ditambahin</p>
+                                        <p>Risiko rendah didapatkan dari hasil perhitungan Tsukamoto (1-z)</p>
 
                                         <hr>
 
                                         <h5>Rekomendasi</h5>
                                         <hr>
-                                        <p>Dengan risiko bencana tinggi, disarankan untuk .... (Arnesz tulung ditambahin)</p>
+                                        <p>Disarankan untuk sebagai tempat tinggal</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
