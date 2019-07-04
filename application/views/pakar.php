@@ -66,7 +66,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-5">
-                                                <b>Jumlah Penduduk</b>
+                                                <b>Jumlah Wilayah Tinggi</b>
                                             </div>
                                             <div class="col-sm-7">
                                                 : <?php echo $v->jumlah_daerahT ?>
@@ -147,7 +147,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-5">
-                                                <b>Jumlah Penduduk</b>
+                                                <b>Jumlah Wilayah Tinggi</b>
                                             </div>
                                             <div class="col-sm-7">
                                                 : <?php echo $v->jumlah_daerahT ?>

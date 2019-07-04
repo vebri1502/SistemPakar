@@ -44,7 +44,7 @@
                       <th>PARAMETER</th>
                       <th style="text-align: center;">BATAS BAWAH</th>
                       <th style="text-align: center;">BATAS ATAS</th>
-                      <th></th>
+                      <th style="text-align: left;">EDIT</th>
                     </tr>
                   </thead>
                   <tbody>
