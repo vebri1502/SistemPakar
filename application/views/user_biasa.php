@@ -27,7 +27,7 @@
                 <div class="col-sm-6">
                     <div class="card bg-light">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
+                            <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1 style="text-align: center;"><?php echo $v->hasil2 ?> %
                                 </h1>
@@ -39,6 +39,86 @@
 
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Tinggi Detail</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Hasil Input</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Tinggi Permukaan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                : <?php echo $v->tinggi_permukaan ?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jumlah Wilayah Tinggi</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                : <?php echo $v->jumlah_daerahT ?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Jarak Menuju Sungai</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                : <?php echo $v->jarak_sungai ?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <b>Curah Hujan</b>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                : <?php echo $v->curah_hujan ?>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <h5>Penjelasan</h5>
+                                        <hr>
+                                        <p>Risiko tinggi dari hasil perhitungan Tsukamoto (z = (A1Z1 + A2Z2 + ... + AnZn)/(A1 + A2 + ... + An))</p>
+
+                                        <hr>
+
+                                        <h5>Rekomendasi</h5>
+                                        <hr>
+                                        <p>Disarankan untuk selalu waspada terhadap potensi banjir yang tinggi dan/atau tidak tinggal daerah tersebut</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">Resiko Rendah</h5>
+                            <p class="card-text">
+                                <h1 style="text-align: center;"><?php echo $v->hasil1 ?> %
+                                </h1>
+                            </p>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
@@ -87,93 +167,13 @@
 
                                         <h5>Penjelasan</h5>
                                         <hr>
-                                        <p>Risiko rendah didapatkan dari .... (Arnesz tulung ditambahin</p>
+                                        <p>Risiko rendah didapatkan dari hasil perhitungan Tsukamoto (1-z)</p>
 
                                         <hr>
 
                                         <h5>Rekomendasi</h5>
                                         <hr>
-                                        <p>Dengan risiko bencana rendah, disarankan untuk .... (Arnesz tulung ditambahin)</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Resiko Tinggi</h5>
-                            <p class="card-text">
-                                <h1 style="text-align: center;"><?php echo $v->hasil1 ?> %
-                                </h1>
-                            </p>
-                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
-                            Detail
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Risiko Tinggi Detail</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h5>Hasil Input</h5>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <b>Tinggi Permukaan</b>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                : <?php echo $v->tinggi_permukaan ?>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <b>Jumlah Penduduk</b>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                : <?php echo $v->jumlah_daerahT ?>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <b>Jarak Menuju Sungai</b>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                : <?php echo $v->jarak_sungai ?>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <b>Curah Hujan</b>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                : <?php echo $v->curah_hujan ?>
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <h5>Penjelasan</h5>
-                                        <hr>
-                                        <p>Risiko tinggi didapatkan dari .... (Arnesz tulung ditambahin</p>
-
-                                        <hr>
-
-                                        <h5>Rekomendasi</h5>
-                                        <hr>
-                                        <p>Dengan risiko bencana tinggi, disarankan untuk .... (Arnesz tulung ditambahin)</p>
+                                        <p>Disarankan untuk sebagai tempat tinggal</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -202,8 +202,8 @@
                                         <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran" name="inputPermukaan">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputDaerah"><h5>Jumlah Daratan Tinggi:</h5></label>
-                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Kepadatan Penduduk" name="banyakDaerah">
+                                        <label for="inputDaerah"><h5>Jumlah Wilayah Tinggi:</h5></label>
+                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Wilayah yang lebih tinggi" name="banyakDaerah">
                                     </div>
                                 </div>
 
