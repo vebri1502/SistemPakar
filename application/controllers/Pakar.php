@@ -31,5 +31,14 @@ class Pakar extends CI_Controller {
 		$this->load->view('pakar');
 	}
 
+	public function tampilHasil() {
+		$user_id = $this->uri->segment(3);  
+        $this->load->model("M_edit");  
+        $data["user_data"] = $this->M_edit->fetch_single_dataH($user_id);  
+        $data["fetch_data"] = $this->M_edit->fetch_dataH();
+        //$this->load->library('form_validation');   
+        $this->load->view("pakar", $data); 
+	}
+
 	
 }

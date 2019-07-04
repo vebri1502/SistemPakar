@@ -55,7 +55,7 @@
                                                 <b>Tinggi Permukaan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->tinggi_permukaan ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -63,7 +63,7 @@
                                                 <b>Jumlah Penduduk</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jumlah_daerahT ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -71,7 +71,7 @@
                                                 <b>Jarak Menuju Sungai</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jarak_sungai ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -79,7 +79,7 @@
                                                 <b>Curah Hujan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->curah_hujan ?>
                                             </div>
                                         </div>
 
@@ -135,7 +135,7 @@
                                                 <b>Tinggi Permukaan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->tinggi_permukaan ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -143,7 +143,7 @@
                                                 <b>Jumlah Penduduk</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jumlah_daerahT ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -151,7 +151,7 @@
                                                 <b>Jarak Menuju Sungai</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jarak_sungai ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -159,7 +159,7 @@
                                                 <b>Curah Hujan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->curah_hujan ?>
                                             </div>
                                         </div>
 

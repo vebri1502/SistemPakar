@@ -24,7 +24,7 @@
                 <a href="#" class="list-group-item list-group-item-action disabled bg-light" style="text-align: center">
                     Menu Pakar
                 </a>
-                <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action">Sistem Pakar</a>
+                <a href="<?= base_url('Pakar/tampilHasil');?>" class="list-group-item list-group-item-action">Sistem Pakar</a>
                 <a href="<?= base_url('C_riwayat/tampilData');?>" class="list-group-item list-group-item-action active">Riwayat Input</a>
                 <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>

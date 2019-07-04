@@ -31,11 +31,9 @@ class Welcome extends CI_Controller {
 			$cek = $this->M_login->ceklogin($user, $pass);
 			
 			if ($cek) {
-				// $cek_login = $this->db->get_where('petugas', array('username' => $user, 'password' => $pass))->row();
-				redirect(base_url('Pakar'));
+				redirect(base_url('Pakar/tampilHasil'));
 				$session['login']=true;
 			} else {
-				//redirect(base_url('C_login'));
 				echo "gagal";
 			}
 		}

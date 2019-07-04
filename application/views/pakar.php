@@ -22,12 +22,13 @@
                 <a href="#" class="list-group-item list-group-item-action disabled bg-light" style="text-align: center">
                     Menu Pakar
                 </a>
-                <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action active">Sistem Pakar</a>
+                <a href="<?= base_url('Pakar/tampilHasil');?>" class="list-group-item list-group-item-action active">Sistem Pakar</a>
                 <a href="<?= base_url('C_riwayat/tampilData');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
                 <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action">Basis Pengetahuan</a>
             </div>
         </div>
         <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
+            <?php foreach ($user_data->result() as $v) {?>
             <div class="row" style="padding-bottom: 20px">
                 <div class="col-sm-6">
                     <div class="card">
@@ -35,7 +36,7 @@
                             <h5 class="card-title">Resiko Rendah</h5>
                             <p class="card-text">
                                 <h1>
-                                    90%
+                                    <?php echo $v->hasil2 ?> %
                                 </h1>
                             </p>
                             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong">
@@ -60,7 +61,7 @@
                                                 <b>Tinggi Permukaan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->tinggi_permukaan ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -68,7 +69,7 @@
                                                 <b>Jumlah Penduduk</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jumlah_daerahT ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -76,7 +77,7 @@
                                                 <b>Jarak Menuju Sungai</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jarak_sungai ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -84,7 +85,7 @@
                                                 <b>Curah Hujan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->curah_hujan ?>
                                             </div>
                                         </div>
 
@@ -116,7 +117,7 @@
                             <h5 class="card-title">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1>
-                                    10%
+                                    <?php echo $v->hasil1 ?> %
                                 </h1>
                             </p>
                             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
@@ -141,7 +142,7 @@
                                                 <b>Tinggi Permukaan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->tinggi_permukaan ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -149,7 +150,7 @@
                                                 <b>Jumlah Penduduk</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jumlah_daerahT ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -157,7 +158,7 @@
                                                 <b>Jarak Menuju Sungai</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->jarak_sungai ?>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -165,7 +166,7 @@
                                                 <b>Curah Hujan</b>
                                             </div>
                                             <div class="col-sm-7">
-                                                :
+                                                : <?php echo $v->curah_hujan ?>
                                             </div>
                                         </div>
 
@@ -173,13 +174,13 @@
 
                                         <h5>Penjelasan</h5>
                                         <hr>
-                                        <p>Risiko rendah didapatkan dari .... (Arnesz tulung ditambahin</p>
+                                        <p>Risiko tinggi didapatkan dari .... (Arnesz tulung ditambahin</p>
 
                                         <hr>
 
                                         <h5>Rekomendasi</h5>
                                         <hr>
-                                        <p>Dengan risiko bencana rendah , disarankan untuk .... (Arnesz tulung ditambahin)</p>
+                                        <p>Dengan risiko bencana tinggi, disarankan untuk .... (Arnesz tulung ditambahin)</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -201,31 +202,31 @@
                                 Input nilai
                             </h3>
                             <hr>
-                            <form>
+                            <form  method="post" action="<?= base_url('C_fuzzy/fuzzy');?>">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputPermukaan"><h5>Tinggi Permukaan (Satuan Meter):</h5></label>
-                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran (Contoh: 15 mdpl)">
+                                        <label for="inputPermukaan"><h5>Tinggi Permukaan:</h5></label>
+                                        <input type="number" class="form-control" id="inputPermukaan" placeholder="Tinggi Permukaan Dataran" name="inputPermukaan">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPenduduk"><h5>Jumlah Penduduk:</h5></label>
-                                        <input type="number" class="form-control" id="inputPenduduk" placeholder="Jumlah Kepadatan Penduduk (Contoh: 95000 orang)">
+                                        <label for="inputDaerah"><h5>Jumlah Daratan Tinggi:</h5></label>
+                                        <input type="number" class="form-control" id="inputDaerah" placeholder="Jumlah Kepadatan Penduduk" name="banyakDaerah">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputSungai"><h5>Jarak Menuju Sungai (Satuan Kilometer):</h5></label>
-                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai (Contoh: 0.7 Km)">
+                                        <label for="inputSungai"><h5>Jarak Menuju Sungai:</h5></label>
+                                        <input type="number" class="form-control" id="inputSungai" placeholder="Jarak Wilayah Dengan Sungai" name="inputSungai">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCurahHujan"><h5>Curah Hujan:</h5></label>
-                                        <input type="number" class="form-control" id="inputCurahHujan" placeholder="Curah Hujan di Wilayah">
+                                        <input type="number" class="form-control" id="inputCurahHujan" placeholder="Curah Hujan di Wilayah" name="inputCHujan">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="btn btn-dark">Submit</button>
+                                    <button type="submit" class="btn btn-dark" name="kirim">Submit</button>
                                 </div>
                                 
                             </form>
@@ -233,6 +234,7 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
             </div>
         </div>
     </div>

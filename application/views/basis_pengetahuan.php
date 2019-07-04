@@ -25,7 +25,7 @@
                 <a href="#" class="list-group-item list-group-item-action disabled bg-light" style="text-align: center">
                     Menu Pakar
                 </a>
-                <a href="<?= base_url('Pakar');?>" class="list-group-item list-group-item-action">Sistem Pakar</a>
+                <a href="<?= base_url('Pakar/tampilHasil');?>" class="list-group-item list-group-item-action">Sistem Pakar</a>
                 <a href="<?= base_url('C_riwayat/tampilData');?>" class="list-group-item list-group-item-action">Riwayat Input</a>
                 <a href="<?= base_url('BasisPengetahuan/tampilData');?>" class="list-group-item list-group-item-action active">Basis Pengetahuan</a>
             </div>
@@ -33,98 +33,6 @@
         
         <div class="col-9" style="padding-left: 10px; padding-top: 10px;">
             <h2>Aturan saat ini </h2>
-            <hr>
-            
-            <h5>Tinggi Permukaan</h5>
-            <hr>
-            <div class="row">
-               <div class="table-responsive">
-                <table class="table table-hover table-sm">
-                  <thead>
-                    <tr>
-                      <th style="text-align: center;">ID</th>
-                      <th>NAMA PARAMETER</th>
-                      <th style="text-align: center;">BATAS BAWAH</th>
-                      <th style="text-align: center;">BATAS ATAS</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($data as $v): ?>
-                      <tr>
-                        <td style="text-align: center;"><?php echo $v["id_parameter"]; ?></td>
-                        <td><?php echo $v["nama_parameter"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_bawah"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_atas"]; ?></td>
-                        <td><a class="btn btn-outline-dark" href="<?php echo base_url() ?>BasisPengetahuan/editData/<?php echo$v['id_parameter'] ?>"></td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-                </div>
-            </div>
-
-            <!-- #################### -->
-
-            <h5>Jumlah Penduduk</h5>
-            <hr>
-            <div class="row">
-               <div class="table-responsive">
-                <table class="table table-hover table-sm">
-                  <thead>
-                    <tr>
-                      <th style="text-align: center;">ID</th>
-                      <th>NAMA PARAMETER</th>
-                      <th style="text-align: center;">BATAS BAWAH</th>
-                      <th style="text-align: center;">BATAS ATAS</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($data as $v): ?>
-                      <tr>
-                        <td style="text-align: center;"><?php echo $v["id_parameter"]; ?></td>
-                        <td><?php echo $v["nama_parameter"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_bawah"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_atas"]; ?></td>
-                        <td><a class="btn btn-outline-dark" href="<?php echo base_url() ?>BasisPengetahuan/editData/<?php echo$v['id_parameter'] ?>"></td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-                </div>
-            </div>
-
-            <h5>Jarak Menuju Sungai</h5>
-            <hr>
-            <div class="row">
-               <div class="table-responsive">
-                <table class="table table-hover table-sm">
-                  <thead>
-                    <tr>
-                      <th style="text-align: center;">ID</th>
-                      <th>NAMA PARAMETER</th>
-                      <th style="text-align: center;">BATAS BAWAH</th>
-                      <th style="text-align: center;">BATAS ATAS</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($data as $v): ?>
-                      <tr>
-                        <td style="text-align: center;"><?php echo $v["id_parameter"]; ?></td>
-                        <td><?php echo $v["nama_parameter"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_bawah"]; ?></td>
-                        <td style="text-align: center;"><?php echo $v["batas_atas"]; ?></td>
-                        <td><a class="btn btn-outline-dark" href="<?php echo base_url() ?>BasisPengetahuan/editData/<?php echo$v['id_parameter'] ?>"></td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-                </div>
-            </div>
-
-            <h5>Curah Hujan</h5>
             <hr>
             <div class="row">
                <div class="table-responsive">
