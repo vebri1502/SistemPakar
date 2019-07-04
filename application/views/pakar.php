@@ -36,7 +36,7 @@
                             <h5 class="card-title">Resiko Tinggi</h5>
                             <p class="card-text">
                                 <h1>
-                                    <?php echo $v->hasil2 ?> %
+                                    <?php echo $v->hasil1 ?> %
                                 </h1>
                             </p>
                             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong">
@@ -117,7 +117,7 @@
                             <h5 class="card-title">Resiko Rendah</h5>
                             <p class="card-text">
                                 <h1>
-                                    <?php echo $v->hasil1 ?> %
+                                    <?php echo $v->hasil2 ?> %
                                 </h1>
                             </p>
                             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong1">
